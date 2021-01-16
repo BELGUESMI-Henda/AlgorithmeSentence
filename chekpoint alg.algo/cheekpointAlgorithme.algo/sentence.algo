@@ -1,0 +1,29 @@
+ALGORITHM SENTENCE
+VAR
+   LghtStc : INTEGER;
+   wrd=1 : INTEGER;
+   i=0 : INTEGER;
+   Sentence: CHAR[];
+   voy= INTEGER;
+
+BEGIN
+    read(Sentence[]);
+    WHILE (Sentence[i]<> ".") DO
+        LghtStc=LghtStc+1;
+        i=i+1;
+    END_WHILE
+    write("le longueur de la phrase est :",LghtStc);
+    FOR i FROM 0 TO LghtStc STEP 1  DO
+        IF (Sentence[i]=" ") THEN
+            wrd=wrd+1;
+        END_IF   
+        IF (Sentence[i]="A") OR (Sentence[i]="U")OR(Sentence[i]="I")OR(Sentence[i]="O")
+        OR (Sentence[i]="E")OR(Sentence[i]="Y") OR (Sentence[i]="a") OR (Sentence[i]="e")
+        OR (Sentence[i]="u") OR (Sentence[i]="i") OR (Sentence[i]="o") OR (Sentence[i]="y")
+         THEN
+            voy=yoy+1;
+        END_IF
+    END_FOR
+    write("le nombre de mot de la phrase est :", wrd);
+    write("le nombre de voyelle de la phrase est :", voy);
+END
